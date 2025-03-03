@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="weather_app">
+        <!-- Definirea claselor entității -->
+        <class>org.example.AppUser</class>
+        <class>org.example.Location</class>
+        <class>org.example.Weather</class>
+
+        <properties>
+            <!-- Configurație JDBC pentru H2 -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:./weatherAppDB;DB_CLOSE_ON_EXIT=FALSE"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+
+            <!-- Configurație EclipseLink pentru generarea tabelelor -->
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+
+            <!-- Alte proprietăți pentru debugging (opțional) -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
+        <!--<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">-->
+        <!--    <persistence-unit name="weatherApp">-->
+        <!--        <class>org.example.data_source.model.User</class>-->
+        <!--        <properties>-->
+        <!--            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>-->
+        <!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:./weatherAppDB"/>-->
+        <!--            <property name="javax.persistence.jdbc.user" value="sa"/>-->
+        <!--            <property name="javax.persistence.jdbc.password" value=""/>-->
+        <!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+        <!--        </properties>-->
+        <!--    </persistence-unit>-->
+        <!--</persistence>-->
+
+
+        <!--<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">-->
+        <!--    <persistence-unit name="weatherApp">-->
+        <!--        <class>org.example.data_source.model.User</class> &lt;!&ndash; Asigură-te că această clasă există &ndash;&gt;-->
+        <!--        <properties>-->
+        <!--            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>-->
+        <!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:./weatherAppDB"/>-->
+        <!--            <property name="javax.persistence.jdbc.user" value="sa"/>-->
+        <!--            <property name="javax.persistence.jdbc.password" value=""/>-->
+        <!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+        <!--            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>-->
+        <!--            <property name="hibernate.show_sql" value="true"/>-->
+        <!--        </properties>-->
+        <!--    </persistence-unit>-->
+        <!--</persistence>-->
+
+        <!--<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">-->
+        <!--    <persistence-unit name="weatherApp">-->
+        <!--        <class>org.example.data_source.model.User</class>-->
+        <!--        <properties>-->
+        <!--            &lt;!&ndash; Configurație JDBC pentru H2 &ndash;&gt;-->
+        <!--            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>-->
+        <!--            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:./weatherAppDB"/>-->
+        <!--            <property name="jakarta.persistence.jdbc.user" value="sa"/>-->
+        <!--            <property name="jakarta.persistence.jdbc.password" value=""/>-->
+
+        <!--            &lt;!&ndash; Configurație Hibernate &ndash;&gt;-->
+        <!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+        <!--            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>-->
+        <!--            <property name="hibernate.show_sql" value="true"/>-->
+        <!--            <property name="eclipselink.ddl-generation" value="create-tables"/>-->
+
+        <!--        </properties>-->
+        <!--    </persistence-unit>-->
+        <!--</persistence>-->
